@@ -11,7 +11,8 @@
 #include "Base.xcconfig"
 
 OCS_APP_NAME = $(inherited) - DEV
-OCS_APP_BUNDLE_IDENTIFIER = $(inherited).dev
-OCS_APP_ICON = $(inherited)Dev
+
+OCS_APP_BUNDLE_IDENTIFIER = com.amine.ocs.dev
+OCS_APP_ICON = AppIconDev
 
 BASE_URL = http:\/\/api.ocs.fr
