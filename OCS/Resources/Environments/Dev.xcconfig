@@ -1,0 +1,17 @@
+//
+//  Dev.xcconfig
+//  OCS
+//
+//  Created by Mohamed Amine HAJ MOHAMED on 18/11/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Base.xcconfig"
+
+OCS_APP_NAME = $(inherited) - DEV
+OCS_APP_BUNDLE_IDENTIFIER = $(inherited).dev
+OCS_APP_ICON = $(inherited)Dev
+
+BASE_URL = http:\/\/api.ocs.fr
