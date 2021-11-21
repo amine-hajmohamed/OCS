@@ -25,7 +25,7 @@ class HTTPClientTests: XCTestCase {
         try super.setUpWithError()
         
         let sessionConfiguration = URLSessionConfiguration.default
-        sessionConfiguration.protocolClasses = [URLProtocolMock.self]
+        sessionConfiguration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: sessionConfiguration)
         
         sut = HTTPClient(session, baseUrl: baseUrl)
@@ -128,9 +128,9 @@ class HTTPClientTests: XCTestCase {
     }
 }
 
-// MARK: - URLProtocolMock
+// MARK: - URLProtocolStub
 
-private class URLProtocolMock: URLProtocol {
+private class URLProtocolStub: URLProtocol {
     
     override class func canInit(with request: URLRequest) -> Bool {
         true
