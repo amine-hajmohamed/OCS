@@ -25,13 +25,19 @@ class HTTPClient {
     // MARK: - Functions
     
     func request(path: String,
-                 method: HTTPMethod = .get) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
-        guard let url = URL(string: baseUrl + path) else {
+                 method: HTTPMethod = .get,
+                 parameters: [String: String]? = nil) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
+        
+        var urlComponents = URLComponents(string: baseUrl + path)
+        urlComponents?.queryItems = parameters?.map { URLQueryItem(name: $0, value: $1) }
+        
+        guard let url = urlComponents?.url else {
             return Fail(error: HTTPClientError.malformedURL).eraseToAnyPublisher()
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        parameters?.forEach { request.allHTTPHeaderFields?[$0] = $1 }
         return session.dataTaskPublisher(for: request)
             .compactMap { data, response in
                 guard let response = response as? HTTPURLResponse else {
