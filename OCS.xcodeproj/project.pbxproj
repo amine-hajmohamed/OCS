@@ -13,6 +13,7 @@
 		677383132746FDB8003643E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677383122746FDB8003643E4 /* Assets.xcassets */; };
 		677383162746FDB8003643E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677383142746FDB8003643E4 /* LaunchScreen.storyboard */; };
 		6773833F2747064D003643E4 /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773833E2747064D003643E4 /* Configurations.swift */; };
+		677543E82747A2EB00F9FC97 /* ContentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677543E72747A2EB00F9FC97 /* ContentUseCase.swift */; };
 		677543EA2747AA4100F9FC97 /* ContentsApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677543E92747AA4100F9FC97 /* ContentsApiProvider.swift */; };
 		677543EC2747AC4800F9FC97 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677543EB2747AC4800F9FC97 /* Content.swift */; };
 		677543EE2747ACC600F9FC97 /* ContentsApiProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677543ED2747ACC600F9FC97 /* ContentsApiProviderImpl.swift */; };
@@ -21,6 +22,7 @@
 		6775440627485E1300F9FC97 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6775440527485E1300F9FC97 /* HTTPClientTests.swift */; };
 		67754408274AAF4900F9FC97 /* contents_search_title_Game.json in Resources */ = {isa = PBXBuildFile; fileRef = 67754407274AAF4900F9FC97 /* contents_search_title_Game.json */; };
 		6775440B274AB02200F9FC97 /* ContentsApiProviderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6775440A274AB02200F9FC97 /* ContentsApiProviderImplTests.swift */; };
+		67754412274AE92200F9FC97 /* ContentUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67754411274AE92200F9FC97 /* ContentUseCaseTests.swift */; };
 		B9DE2C2F3F96FDDF0731937A /* Pods_OCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7723FAE8936B04B3D5967750 /* Pods_OCS.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,7 @@
 		6773833D27470623003643E4 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		6773833E2747064D003643E4 /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		6773834027470665003643E4 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		677543E72747A2EB00F9FC97 /* ContentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUseCase.swift; sourceTree = "<group>"; };
 		677543E92747AA4100F9FC97 /* ContentsApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsApiProvider.swift; sourceTree = "<group>"; };
 		677543EB2747AC4800F9FC97 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		677543ED2747ACC600F9FC97 /* ContentsApiProviderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsApiProviderImpl.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		6775440527485E1300F9FC97 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		67754407274AAF4900F9FC97 /* contents_search_title_Game.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contents_search_title_Game.json; sourceTree = "<group>"; };
 		6775440A274AB02200F9FC97 /* ContentsApiProviderImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsApiProviderImplTests.swift; sourceTree = "<group>"; };
+		67754411274AE92200F9FC97 /* ContentUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUseCaseTests.swift; sourceTree = "<group>"; };
 		7723FAE8936B04B3D5967750 /* Pods_OCS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5A916283A0668016FDF7D5 /* Pods-OCS.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCS.dev.xcconfig"; path = "Target Support Files/Pods-OCS/Pods-OCS.dev.xcconfig"; sourceTree = "<group>"; };
 		7E3D1D6AACD435369F7FA286 /* Pods-OCSTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCSTests.dev.xcconfig"; path = "Target Support Files/Pods-OCSTests/Pods-OCSTests.dev.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		677383222746FDE0003643E4 /* OCSTests */ = {
 			isa = PBXGroup;
 			children = (
+				6775440F274AE8EE00F9FC97 /* Domain */,
 				677543EF2747B05700F9FC97 /* Data */,
 			);
 			path = OCSTests;
@@ -244,6 +249,7 @@
 		677383352746FF47003643E4 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				677543E72747A2EB00F9FC97 /* ContentUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -333,6 +339,22 @@
 				6775440A274AB02200F9FC97 /* ContentsApiProviderImplTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		6775440F274AE8EE00F9FC97 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				67754410274AE8FC00F9FC97 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		67754410274AE8FC00F9FC97 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				67754411274AE92200F9FC97 /* ContentUseCaseTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +534,7 @@
 				6773833F2747064D003643E4 /* Configurations.swift in Sources */,
 				677543FD2748048000F9FC97 /* HTTPClient.swift in Sources */,
 				677543F52747BE5E00F9FC97 /* ContentNTDto.swift in Sources */,
+				677543E82747A2EB00F9FC97 /* ContentUseCase.swift in Sources */,
 				677543EC2747AC4800F9FC97 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67754412274AE92200F9FC97 /* ContentUseCaseTests.swift in Sources */,
 				6775440627485E1300F9FC97 /* HTTPClientTests.swift in Sources */,
 				6775440B274AB02200F9FC97 /* ContentsApiProviderImplTests.swift in Sources */,
 			);

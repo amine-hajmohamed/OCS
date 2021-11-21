@@ -17,7 +17,7 @@ struct ContentNTDto: Decodable {
     let imageurl: String?
     
     func toEntity() -> Content? {
-        guard let title = title?.first?.value, let subtitle = subtitle, let imageurl = imageurl else {
+        guard let title = title?.first?.value, let subtitle = subtitle else {
             return nil
         }
 

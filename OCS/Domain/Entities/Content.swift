@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Content {
+struct Content: Equatable {
     let title: String
     let subTitle: String
-    let imageURL: String
+    let imageURL: String?
 }
