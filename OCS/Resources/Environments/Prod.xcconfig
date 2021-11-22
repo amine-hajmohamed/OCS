@@ -13,4 +13,4 @@
 OCS_APP_BUNDLE_IDENTIFIER = com.amine.ocs
 OCS_APP_ICON = AppIcon
 
-BASE_URL = http:\/\/api.ocs.fr
+BASE_URL = https:\/\/api.ocs.fr
