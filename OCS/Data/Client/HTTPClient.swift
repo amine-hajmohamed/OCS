@@ -13,13 +13,13 @@ class HTTPClient {
     // MARK: - Properties
     
     private let session: URLSession
-    private let baseUrl: String
+    private let baseURL: String
     
     // MARK: - Initializer
     
-    init(_ session: URLSession, baseUrl: String) {
+    init(_ session: URLSession, baseURL: String) {
         self.session = session
-        self.baseUrl = baseUrl
+        self.baseURL = baseURL
     }
     
     // MARK: - Functions
@@ -28,7 +28,7 @@ class HTTPClient {
                  method: HTTPMethod = .get,
                  parameters: [String: String]? = nil) -> AnyPublisher<(data: Data, response: HTTPURLResponse), Error> {
         
-        var urlComponents = URLComponents(string: baseUrl + path)
+        var urlComponents = URLComponents(string: baseURL + path)
         urlComponents?.queryItems = parameters?.map { URLQueryItem(name: $0, value: $1) }
         
         guard let url = urlComponents?.url else {

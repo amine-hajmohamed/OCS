@@ -28,7 +28,7 @@ class HTTPClientTests: XCTestCase {
         sessionConfiguration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: sessionConfiguration)
         
-        sut = HTTPClient(session, baseUrl: baseUrl)
+        sut = HTTPClient(session, baseURL: baseUrl)
     }
     
     override func tearDownWithError() throws {

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  OCS
+
+  Created by Mohamed Amine HAJ MOHAMED on 22/11/2021.
+  
+*/
+
+
+"ContentsHeader.Label.Slogan1" = "Want to watch new series ?";
+"ContentsHeader.Label.Slogan2" = "Want to watch new movies ?";
+"ContentsHeader.Label.Slogan3" = "Your movies and series are here";
+"ContentsHeader.SearchBar.Placeholder" = "Search by title";

@@ -21,7 +21,7 @@ class ContentsApiProviderImplTests: XCTestCase {
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.protocolClasses = [URLProtocolStub.self]
         let session = URLSession(configuration: sessionConfiguration)
-        let httpClient = HTTPClient(session, baseUrl: "")
+        let httpClient = HTTPClient(session, baseURL: "https://api.ocs.fr")
         sut = ContentsApiProviderImpl(httpClient: httpClient)
     }
     
