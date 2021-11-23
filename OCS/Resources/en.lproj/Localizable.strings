@@ -6,8 +6,11 @@
   
 */
 
-
 "ContentsHeader.Label.Slogan1" = "Want to watch new series ?";
 "ContentsHeader.Label.Slogan2" = "Want to watch new movies ?";
 "ContentsHeader.Label.Slogan3" = "Your movies and series are here";
 "ContentsHeader.SearchBar.Placeholder" = "Search by title";
+
+"ContentsViewController.Message.NoResult" = "No result";
+"ContentsViewController.Message.Loading" = "Loading";
+"ContentsViewController.Message.ErrorMessage" = "An error occurred please try again later.";

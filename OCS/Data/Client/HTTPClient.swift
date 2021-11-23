@@ -43,7 +43,7 @@ class HTTPClient {
                 guard let response = response as? HTTPURLResponse else {
                     return nil
                 }
-
+                
                 return (data, response)
             }
             .mapError { $0 as Error }

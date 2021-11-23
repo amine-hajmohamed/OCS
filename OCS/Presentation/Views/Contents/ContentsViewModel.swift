@@ -12,6 +12,7 @@ class ContentsViewModel {
     
     // MARK: - Properties
     
+    @Published private(set) var message: String?
     @Published private(set) var contents: [Content] = []
     
     @Published private var searchText: String = ""
@@ -49,8 +50,24 @@ private extension ContentsViewModel {
     }
     
     private func searchContent(title: String) {
+        message = "ContentsViewController.Message.Loading".localized + "..."
         contentUseCase.searchContents(title)
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] contents in
+            .sink(receiveCompletion: { [weak self] completion in
+                guard let self = self else {
+                    return
+                }
+                
+                if case .failure(_) = completion {
+                    self.contents = []
+                    self.message = "ContentsViewController.Message.ErrorMessage".localized
+                } else {
+                    if self.contents.isEmpty {
+                        self.message = "ContentsViewController.Message.NoResult".localized
+                    } else {
+                        self.message = nil
+                    }
+                }
+            }, receiveValue: { [weak self] contents in
                 self?.contents = contents
             })
             .store(in: &subscriptions)

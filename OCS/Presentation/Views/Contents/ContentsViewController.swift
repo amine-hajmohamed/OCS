@@ -16,6 +16,8 @@ class ContentsViewController: UIViewController {
     
     // MARK: - @IBOutlets
     
+    @IBOutlet private weak var labelMessage: UILabel!
+    @IBOutlet private weak var viewMessage: UIView!
     @IBOutlet private weak var viewHeader: ContentsHeader!
     @IBOutlet private weak var collectionViewContents: UICollectionView!
     
@@ -58,6 +60,14 @@ class ContentsViewController: UIViewController {
             .sink { [weak self] text in
                 self?.viewModel?.onSearch(title: text)
             }
+            .store(in: &subscriptions)
+        
+        viewModel?.$message
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] message in
+                self?.labelMessage.text = message
+                self?.viewMessage.isHidden = message == nil
+            })
             .store(in: &subscriptions)
         
         viewModel?.$contents
