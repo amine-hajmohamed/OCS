@@ -37,7 +37,6 @@ opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - multiline_arguments
   - multiline_function_chains
   - multiline_parameters
-  - object_literal
   - operator_usage_whitespace
   - overridden_super_call
   - override_in_extension
@@ -63,6 +62,7 @@ opt_in_rules: # some rules are turned off by default, so you need to opt-in
   - vertical_parameter_alignment_on_call
   - xct_specific_matcher
   - yoda_condition
+#  - object_literal
 
 # Alternatively, specify all rules explicitly by uncommenting this option:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
@@ -110,7 +110,10 @@ identifier_name:
     error: 4 # only error
   excluded: # excluded via string array
     - id
-    - URL
+    - url
     - key
     - sut
+    - get
+    - put
+    - nib
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)

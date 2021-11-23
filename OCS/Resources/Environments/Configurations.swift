@@ -9,13 +9,16 @@ import Foundation
 
 class Configurations {
     
+    static let current = Configurations(bundle: Bundle(for: Configurations.self))
+    
     private let bundle: Bundle
     
     init(bundle: Bundle) {
         self.bundle = bundle
     }
     
-    var baseUrl: String { bundle.infoForKey("BASE_URL") }
+    var baseApiURL: String { bundle.infoForKey("BASE_API_URL") }
+    var baseRessourcesURL: String { bundle.infoForKey("BASE_RESSOURCES_URL") }
 }
 
 private extension Bundle {

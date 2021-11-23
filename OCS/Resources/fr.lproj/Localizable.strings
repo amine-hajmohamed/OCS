@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  OCS
+
+  Created by Mohamed Amine HAJ MOHAMED on 22/11/2021.
+  
+*/
+
+"ContentsHeader.Label.Slogan1" = "Envie de voir de nouvelles séries ?";
+"ContentsHeader.Label.Slogan2" = "Vous voulez regarder de nouveaux films ?";
+"ContentsHeader.Label.Slogan3" = "Vos films et séries sont ici";
+"ContentsHeader.SearchBar.Placeholder" = "Recherche par titre";
+
+"ContentsViewController.Message.NoResult" = "Pas de résultat";
+"ContentsViewController.Message.Loading" = "Chargement";
+"ContentsViewController.Message.ErrorMessage" = "Une erreur s'est produite veuillez réessayer plus tard.";
