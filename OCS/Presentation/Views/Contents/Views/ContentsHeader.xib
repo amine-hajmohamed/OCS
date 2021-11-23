@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentsHeader" customModule="OCS" customModuleProvider="target">
+            <connections>
+                <outlet property="labelSlogan" destination="xKb-38-RZe" id="HU0-mW-DGt"/>
+                <outlet property="searchBar" destination="hKL-p3-r0Q" id="uKJ-6L-nKx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OCSLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-pZ-szI">
+                    <rect key="frame" x="30" y="0.0" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zoL-pZ-szI" secondAttribute="height" multiplier="2:1" id="1An-XF-iNV"/>
+                        <constraint firstAttribute="width" constant="100" id="M6f-94-Ey8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLOGAN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-38-RZe">
+                    <rect key="frame" x="140" y="16" width="236" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" name="PrimaryWhiteColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hKL-p3-r0Q">
+                    <rect key="frame" x="10" y="55" width="386" height="61"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                            <color key="value" name="PrimaryWhiteColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </searchBar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="PrimaryBlackColor"/>
+            <constraints>
+                <constraint firstItem="zoL-pZ-szI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="85D-DF-mZd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xKb-38-RZe" secondAttribute="trailing" constant="30" id="GRh-I6-i8N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hKL-p3-r0Q" secondAttribute="bottom" id="P6x-1A-dYD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hKL-p3-r0Q" secondAttribute="trailing" constant="10" id="WtV-VC-xGb"/>
+                <constraint firstItem="hKL-p3-r0Q" firstAttribute="top" secondItem="zoL-pZ-szI" secondAttribute="bottom" constant="5" id="aOY-f2-gdF"/>
+                <constraint firstItem="xKb-38-RZe" firstAttribute="leading" secondItem="zoL-pZ-szI" secondAttribute="trailing" constant="10" id="jbb-J3-Nvs"/>
+                <constraint firstItem="xKb-38-RZe" firstAttribute="centerY" secondItem="zoL-pZ-szI" secondAttribute="centerY" id="kQE-ut-rme"/>
+                <constraint firstItem="zoL-pZ-szI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="mA1-y8-cwI"/>
+                <constraint firstItem="hKL-p3-r0Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="vBY-Fa-exq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-193.20652173913044"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="OCSLogo" width="600" height="600"/>
+        <namedColor name="PrimaryBlackColor">
+            <color red="0.086000002920627594" green="0.086000002920627594" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryWhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
