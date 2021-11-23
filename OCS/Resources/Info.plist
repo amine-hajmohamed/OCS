@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BASE_URL</key>
-	<string>$(BASE_URL)</string>
+	<key>BASE_API_URL</key>
+	<string>$(BASE_API_URL)</string>
+	<key>BASE_RESSOURCES_URL</key>
+	<string>$(BASE_RESSOURCES_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -29,5 +31,9 @@
 	<string>$(OCS_APP_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(OCS_BUILD_VERSION)</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

@@ -26,7 +26,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Black"/>
+                        <color key="backgroundColor" name="PrimaryBlackColor"/>
                         <constraints>
                             <constraint firstItem="myk-X1-I8T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Nsf-pa-dgW"/>
                             <constraint firstItem="myk-X1-I8T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="P0j-IT-ax9"/>
@@ -40,7 +40,7 @@
     </scenes>
     <resources>
         <image name="OCSLogo" width="600" height="600"/>
-        <namedColor name="Black">
+        <namedColor name="PrimaryBlackColor">
             <color red="0.086000002920627594" green="0.086000002920627594" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>

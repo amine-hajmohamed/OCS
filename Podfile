@@ -3,6 +3,7 @@
 
 def common_pods
   pod 'SwiftLint', '0.43.1'
+  pod 'SDWebImage', '5.12.1'
 end
 
 target 'OCS' do
